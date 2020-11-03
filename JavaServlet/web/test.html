@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个test</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script type="text/javascript" src="layui/layui.js"></script>
+</head>
+<body>
+
+<button class="layui-btn layui-btn-radius layui-btn-normal"><i class="layui-icon layui-icon-username"></i>登录</button>
+
+<div class="layui-carousel" id="test1">
+    <div carousel-item>
+        <div><img src="image/a.jpeg" style="height:100% ;width: 100%;"/></div>
+        <div><img src="image/b.jpeg" style="height:100% ;width: 100%;"/></div>
+        <div><img src="image/c.jpeg" style="height:100% ;width: 100%;"/></div>
+        <div><img src="image/d.jpeg" style="height:100% ;width: 100%;"/></div>
+<!--        <div>条目5</div>-->
+    </div>
+</div>
+<!-- 条目中可以是任意内容，如：<img src=""> -->
+
+<script>
+    layui.use('carousel', function(){
+        var carousel = layui.carousel;
+        //建造实例
+        carousel.render({
+            elem: '#test1'
+            ,width: '50%' //设置容器宽度
+            ,height:'150px'
+            ,arrow: 'always' //始终显示箭头
+            //,anim: 'updown' //切换动画方式
+        });
+    });
+</script>
+
+</body>
+</html>
